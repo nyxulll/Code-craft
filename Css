@@ -1,0 +1,95 @@
+:root {
+    --primary: #5e35b1;
+    --secondary: #3949ab;
+    --accent: #7c4dff;
+    --dark: #121212;
+    --darker: #0a0a0a;
+    --light: #e8eaf6;
+    --success: #00c853;
+    --warning: #ffab00;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--darker);
+    color: var(--light);
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(92, 53, 177, 0.3);
+}
+
+.nav-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-btn.active {
+    background: rgba(255,255,255,0.2);
+    border-radius: 4px;
+}
+
+/* Editor Styles */
+.editor-section {
+    display: grid;
+    grid-template-rows: auto 1fr 300px;
+    height: calc(100vh - 70px);
+    padding: 1rem;
+}
+
+.code-editor {
+    background: #1e1e2d;
+    color: #f8f8f2;
+    font-family: 'Consolas', monospace;
+    padding: 1rem;
+    overflow: auto;
+    tab-size: 2;
+    border: 1px solid var(--accent);
+}
+
+.preview-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: white;
+}
+
+/* Ideas Section */
+.ideas-section {
+    padding: 2rem;
+}
+
+.ai-generator {
+    background: rgba(57, 73, 171, 0.2);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 1px dashed var(--accent);
+}
+
+.idea-card {
+    background: rgba(92, 53, 177, 0.3);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+}
